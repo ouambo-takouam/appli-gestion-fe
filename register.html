@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/auth.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="auth-container">
+      <!-- Add logo here later -->
+
+      <h1>Create your account</h1>
+
+      <form action="/register" method="POST">
+        <div class="form-group">
+          <label for="name">Company name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="ETS. Dupont"
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">Phone</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="+237 545 878 878"
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">Website</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="https://company.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">Payment reference</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="REF123456"
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">Email</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="jeandupont@gmail.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="••••••••"
+          />
+          <p class="password-requirements">
+            Minimum 8 characters, with an uppercase letter and a number.
+          </p>
+        </div>
+        <button type="submit" class="btn">Create my account</button>
+      </form>
+
+      <div class="links">
+        <p>Already have an account? <a href="login.html">Log in.</a></p>
+      </div>
+    </div>
+  </body>
+</html>

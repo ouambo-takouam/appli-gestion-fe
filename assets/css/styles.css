@@ -1,0 +1,584 @@
+/*------------------*/
+/* 1. Custom fonts  */
+/*------------------*/
+@font-face {
+  font-family: "Inter Light BETA";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Inter Light BETA"), url("Inter-Light-BETA.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Inter Regular"),
+    url("/assets/fonts/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Inter Italic"),
+    url("/assets/fonts/Inter-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Inter Medium"),
+    url("/assets/fonts/Inter-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Medium Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Inter Medium Italic"),
+    url("/assets/fonts/Inter-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Semi Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Inter Semi Bold"),
+    url("/assets/fonts/Inter-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Semi Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Inter Semi Bold Italic"),
+    url("/assets/fonts/Inter-SemiBoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Inter Bold"), url("/assets/fonts/Inter-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Inter Bold Italic"),
+    url("/assets/fonts/Inter-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Extra Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Inter Extra Bold"),
+    url("/assets/fonts/Inter-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Extra Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Inter Extra Bold Italic"),
+    url("/assets/fonts/Inter-ExtraBoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Inter Black"),
+    url("/assets/fonts/Inter-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Inter Black Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Inter Black Italic"),
+    url("/assets/fonts/Inter-BlackItalic.woff") format("woff");
+}
+
+/*----------------------*/
+/* 2. Custom variables  */
+/*----------------------*/
+:root {
+  /* Font families */
+  --ff-base: "Inter", sans-serif;
+
+  /* Font weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+  --fw-black: 900;
+
+  /* colors */
+  --clr-neutral-80: hsl(0, 0%, 20%);
+  --clr-light-90: hsl(0, 0%, 97%);
+  --clr-accent-40: hsl(122, 39%, 49%);
+  --clr-accent-90: hsl(122, 39%, 40%);
+  --clr-purple: hsl(253, 28%, 36%);
+  --clr-blue: hsl(204, 47%, 32%);
+  --clr-white-100: hsl(0, 0%, 100%);
+  --clr-white-96: hsl(0, 0%, 96%);
+  --clr-black: hsl(0, 0%, 0%);
+
+  /* layout */
+  --small-screen: 48rem;
+  --large-screen: 75rem;
+
+  /* shadows */
+}
+
+/*----------------*/
+/* 3. CSS Reset   */
+/*----------------*/
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Add accessible line-height | Improve text rendering */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*--------------------*/
+/* 4. Global styles   */
+/*--------------------*/
+
+/* Global */
+html {
+  font-family: var(--ff-base);
+}
+
+body {
+  background-color: var(--clr-light-90);
+  color: var(--clr-neutral-80);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Components */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr [content-start] min(var(--large-screen), 90%) [content-end] 1fr;
+}
+
+.grid-container > * {
+  grid-column: content;
+}
+
+/*--------------*/
+/* 5. Header    */
+/*--------------*/
+header {
+  padding-block: 1em;
+  position: relative;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-menu {
+  position: absolute;
+  top: 3.125rem;
+  left: 0;
+  right: 0;
+  padding-block: 1.8em;
+  background-color: var(--clr-light-90);
+  /* bottom shadow will be added here */
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+}
+
+@media (min-width: 42rem) {
+  .navigation-menu {
+    position: unset;
+    display: unset;
+    transform: translateX(0);
+    padding: 0.2rem;
+  }
+
+  .navigation-menu ul {
+    display: flex;
+    gap: 1.2em;
+  }
+
+  .navigation-menu a {
+    padding: 0.2em 0.4em;
+  }
+}
+
+.navigation-menu.open {
+  transform: translateX(0);
+}
+
+.navigation-menu li {
+  margin-bottom: 2em;
+}
+
+@media (min-width: 42rem) {
+  .navigation-menu li {
+    margin-bottom: 0;
+  }
+}
+
+.navigation-menu a {
+  font-size: 1.15rem;
+}
+
+@media (min-width: 42rem) {
+  .navigation-menu a {
+    font-size: 1rem;
+  }
+}
+
+.hamburger {
+  width: 1.25rem;
+  height: 0.938rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 999;
+}
+
+@media (min-width: 42rem) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.hamburger span {
+  height: 0.125rem;
+  background-color: var(--clr-neutral-80);
+  border-radius: 0.2rem;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/*----------*/
+/* 6. CTA   */
+/*----------*/
+.cta {
+  background: linear-gradient(
+    135deg,
+    var(--clr-blue) 0%,
+    var(--clr-purple) 100%
+  );
+  color: var(--clr-white-100);
+  padding-block: 6.5rem;
+  text-align: center;
+}
+
+@media (min-width: 42rem) {
+  .cta {
+    padding-block: 9.375rem;
+  }
+}
+
+.cta h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: var(--fw-black);
+}
+
+@media (min-width: 42rem) {
+  .cta h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.cta p {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto 30px;
+}
+
+@media (min-width: 42rem) {
+  .cta p {
+    font-size: 1.2rem;
+  }
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.8em;
+}
+
+.cta-button {
+  background-color: var(--clr-accent-40);
+  color: var(--clr-white-100);
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--clr-accent-90);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  border: 2px solid var(--clr-white-100);
+}
+
+.cta-button.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*---------------*/
+/* 7. Features   */
+/*---------------*/
+.features {
+  padding: 80px 0;
+  background-color: var(--clr-white-100);
+}
+
+.features .title,
+.features .subtitle {
+  text-align: center;
+}
+
+.features .title {
+  margin-bottom: 35px;
+  font-size: 2rem;
+  color: var(--clr-blue);
+}
+
+.features .subtitle {
+  margin-bottom: 20px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 30px;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+  color: var(--clr-blue);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+/*----------*/
+/* 8. Why   */
+/*----------*/
+.why {
+  padding: 80px 0;
+  background-color: #f1f5f9;
+}
+
+.why .title {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 2rem;
+  color: var(--clr-blue);
+}
+
+.why-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-white-100);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 48rem) {
+  .why-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.why-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 48rem) {
+  .why-image {
+    width: 40%;
+    height: unset;
+  }
+}
+
+.why-content {
+  padding: 30px;
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .why-content {
+    width: 60%;
+  }
+}
+
+.why-content h3 {
+  color: var(--clr-blue);
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+/* Images d'illustration pour chaque bénéfice */
+.why-ceo {
+  background-image: url("../images/growth.jpg");
+}
+
+.why-stocker {
+  background-image: url("../images/storekeeper.jpg");
+}
+
+.why-sales {
+  background-image: url("../images/pro.jpg");
+}
+
+.why-accountant {
+  background-image: url("../images/easy.jpg");
+}
+
+/*------------*/
+/* 9. Try     */
+/*------------*/
+.try {
+  padding: 80px 0;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    var(--clr-purple) 0%,
+    var(--clr-blue) 100%
+  );
+  color: var(--clr-white-100);
+}
+
+.try .title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.try .subtitle {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+  background-color: var(--clr-blue);
+  color: var(--clr-white-100);
+  padding: 30px 0;
+  text-align: center;
+}

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transactions List</title>
+    <title>Welcome to the admin page</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -193,56 +193,86 @@
 
       <!-- Contenu principal -->
       <main class="main-content">
+        <!-- Entete de la page -->
         <header class="topbar">
-          <div class="topbar-left">
-            <button class="mobile-toggle">
-              <i class="fas fa-bars"></i>
-            </button>
-            <h1>Transactions</h1>
-          </div>
-          <div class="topbar-right">
-            <div class="search-box">
-              <i class="fas fa-search"></i>
-              <input type="text" placeholder="Rechercher..." />
-            </div>
-            <button class="btn btn-primary">
-              <i class="fas fa-plus"></i> Nouvelle transaction
-            </button>
+          <button class="mobile-toggle">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              height="24"
+              preserveAspectRatio="none"
+              viewBox="0 0 24 24"
+              width="24"
+              fill="currentColor"
+            >
+              <path
+                transform="scale(1 1)"
+                d="M4.5 7h15v1.68h-15V7zm0 5.82v-1.64h15v1.64h-15zm0 4.18v-1.68h15V17h-15z"
+              ></path>
+            </svg>
+          </button>
+          <h1 class="topbar-title">Liste des clients</h1>
+          <div class="topbar-actions">
+            <a href="#">Ajouter client</a>
+            <button></button>
           </div>
         </header>
 
-        <div class="page-content">
-          <div class="content-section">
-            <div class="section-header">
-              <h2>Liste des transactions</h2>
-              <div class="actions">
-                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle">
-                    <i class="fas fa-filter"></i> Filtres
-                  </button>
-                  <div class="dropdown-menu">
-                    <a href="#" class="dropdown-item">Aujourd'hui</a>
-                    <a href="#" class="dropdown-item">Cette semaine</a>
-                    <a href="#" class="dropdown-item">Ce mois</a>
-                    <a href="#" class="dropdown-item">Payées</a>
-                    <a href="#" class="dropdown-item">En attente</a>
-                  </div>
-                </div>
-                <button class="btn btn-secondary">
-                  <i class="fas fa-download"></i> Exporter
-                </button>
+        <!-- Contenu de la page -->
+        <!-- <div class="page-content">
+          <div class="cards-container">
+            <div class="card">
+              <div class="card-icon bg-blue">
+                <i class="fas fa-boxes"></i>
+              </div>
+              <div class="card-info">
+                <h3>Produits en stock</h3>
+                <p>1,248</p>
               </div>
             </div>
+            <div class="card">
+              <div class="card-icon bg-green">
+                <i class="fas fa-file-invoice-dollar"></i>
+              </div>
+              <div class="card-info">
+                <h3>Ventes ce mois</h3>
+                <p>248</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-icon bg-orange">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="card-info">
+                <h3>Nouveaux clients</h3>
+                <p>32</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-icon bg-purple">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="card-info">
+                <h3>Chiffre d'affaires</h3>
+                <p>5,248,000 FCFA</p>
+              </div>
+            </div>
+          </div>
 
+          <div class="content-section">
+            <div class="section-header">
+              <h2>Dernières transactions</h2>
+              <a href="#" class="view-all">Voir tout</a>
+            </div>
             <div class="table-responsive">
-              <table class="data-table">
+              <table>
                 <thead>
                   <tr>
-                    <th>ID <i class="fas fa-sort"></i></th>
-                    <th>Client <i class="fas fa-sort"></i></th>
-                    <th>Date <i class="fas fa-sort"></i></th>
-                    <th>Montant <i class="fas fa-sort"></i></th>
-                    <th>Statut <i class="fas fa-sort"></i></th>
+                    <th>ID</th>
+                    <th>Client</th>
+                    <th>Date</th>
+                    <th>Montant</th>
+                    <th>Statut</th>
                     <th>Actions</th>
                   </tr>
                 </thead>
@@ -252,38 +282,51 @@
                     <td>SARL Tech Solutions</td>
                     <td>15/06/2023</td>
                     <td>125,000 FCFA</td>
-                    <td><span class="status-badge success">Payé</span></td>
-                    <td class="actions">
-                      <button class="action-btn view" title="Voir">
+                    <td><span class="status paid">Payé</span></td>
+                    <td>
+                      <button class="action-btn view">
                         <i class="fas fa-eye"></i>
                       </button>
-                      <button class="action-btn edit" title="Éditer">
-                        <i class="fas fa-edit"></i>
-                      </button>
-                      <button class="action-btn delete" title="Supprimer">
-                        <i class="fas fa-trash"></i>
+                      <button class="action-btn print">
+                        <i class="fas fa-print"></i>
                       </button>
                     </td>
                   </tr>
-                  <!-- Plus de lignes... -->
+                  <tr>
+                    <td>#1253</td>
+                    <td>Entreprise ABC</td>
+                    <td>14/06/2023</td>
+                    <td>85,500 FCFA</td>
+                    <td><span class="status pending">En attente</span></td>
+                    <td>
+                      <button class="action-btn view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn print">
+                        <i class="fas fa-print"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#1252</td>
+                    <td>Shop XYZ</td>
+                    <td>13/06/2023</td>
+                    <td>210,000 FCFA</td>
+                    <td><span class="status paid">Payé</span></td>
+                    <td>
+                      <button class="action-btn view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn print">
+                        <i class="fas fa-print"></i>
+                      </button>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
-
-            <div class="pagination">
-              <span class="pagination-info">1-10 sur 124 résultats</span>
-              <button class="btn btn-secondary" disabled>
-                <i class="fas fa-chevron-left"></i>
-              </button>
-              <button class="btn btn-secondary active">1</button>
-              <button class="btn btn-secondary">2</button>
-              <button class="btn btn-secondary">3</button>
-              <button class="btn btn-secondary">
-                <i class="fas fa-chevron-right"></i>
-              </button>
-            </div>
           </div>
-        </div>
+        </div> -->
       </main>
     </div>
 

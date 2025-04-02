@@ -1,6 +1,9 @@
-const sidebar = document.getElementById("sidebar");
-const toggleBtn = document.getElementById("toggleBtn");
-const mobileToggle = document.getElementById("mobileToggle");
+const sidebar = document.querySelector(".sidebar");
+const toggleBtn = document.querySelector(".toggle-btn");
+const mobileToggle = document.querySelector(".mobile-toggle");
+const overlay = document.querySelector(".overlay");
+const logo = document.querySelector(".logo");
+
 const sidebarItems = document.querySelectorAll(
   ".sidebar-nav li:not(.has-submenu)"
 );
@@ -9,22 +12,24 @@ const submenuParents = document.querySelectorAll(".has-submenu");
 // Toggle sidebar on desktop
 toggleBtn.addEventListener("click", function () {
   sidebar.classList.toggle("collapsed");
+
+  // Toggle between two logo versions
+  if (logo.src.includes("logo.svg")) {
+    logo.src = "assets/images/logo-collapsed.svg";
+  } else {
+    logo.src = "assets/images/logo.svg";
+  }
 });
 
 // Toggle sidebar on mobile
 mobileToggle.addEventListener("click", function () {
   sidebar.classList.toggle("show");
+  overlay.classList.toggle("is-active");
 });
 
-// Close sidebar when clicking outside on mobile
-document.addEventListener("click", function (e) {
-  if (
-    window.innerWidth <= 992 &&
-    !sidebar.contains(e.target) &&
-    e.target !== mobileToggle
-  ) {
-    sidebar.classList.remove("show");
-  }
+overlay.addEventListener("click", function () {
+  sidebar.classList.remove("show");
+  overlay.classList.remove("is-active");
 });
 
 // Active menu item (for non-submenu items)

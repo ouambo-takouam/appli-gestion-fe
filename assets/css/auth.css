@@ -12,8 +12,14 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 450px;
-  padding: 40px;
+  padding: 30px 20px;
   text-align: center;
+}
+
+@media (min-width: 30rem) {
+  .auth-container {
+    padding: 40px;
+  }
 }
 
 .auth-container h1 {
@@ -93,14 +99,4 @@ input:focus {
   font-size: 0.8rem;
   color: #666;
   margin-top: 5px;
-}
-
-@media (max-width: 480px) {
-  .login-container {
-    padding: 30px 20px;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
 }

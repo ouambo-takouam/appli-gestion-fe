@@ -248,55 +248,48 @@
         <!-- Navigation entre rubrique de l'objet visualise (client, fournisseur, ...) -->
         <div class="nav-tabs-wrapper">
           <ul class="nav-tabs">
-            <li class="nav-iten"><a href="#">Details</a></li>
-            <li class="nav-iten"><a href="#">Enrollments</a></li>
-            <li class="nav-iten"><a href="#">Activity feed</a></li>
-            <li class="nav-iten"><a href="#">Quiz & Survey</a></li>
+            <li class="nav-item">
+              <a class="nav-link active" data-target="details" href="#"
+                >Details</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-target="enrollments" href="#"
+                >Enrollments</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-target="activity-feed" href="#"
+                >Activity feed</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-target="quiz-survey" href="#"
+                >Quiz & Survey</a
+              >
+            </li>
           </ul>
         </div>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-          magnam praesentium qui omnis, sequi reprehenderit minima tempora fuga
-          laborum molestias provident distinctio commodi aperiam perferendis
-          animi! Eos cumque laboriosam iusto.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-          magnam praesentium qui omnis, sequi reprehenderit minima tempora fuga
-          laborum molestias provident distinctio commodi aperiam perferendis
-          animi! Eos cumque laboriosam iusto.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-          magnam praesentium qui omnis, sequi reprehenderit minima tempora fuga
-          laborum molestias provident distinctio commodi aperiam perferendis
-          animi! Eos cumque laboriosam iusto.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-          magnam praesentium qui omnis, sequi reprehenderit minima tempora fuga
-          laborum molestias provident distinctio commodi aperiam perferendis
-          animi! Eos cumque laboriosam iusto.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-          magnam praesentium qui omnis, sequi reprehenderit minima tempora fuga
-          laborum molestias provident distinctio commodi aperiam perferendis
-          animi! Eos cumque laboriosam iusto.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-          magnam praesentium qui omnis, sequi reprehenderit minima tempora fuga
-          laborum molestias provident distinctio commodi aperiam perferendis
-          animi! Eos cumque laboriosam iusto.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-          magnam praesentium qui omnis, sequi reprehenderit minima tempora fuga
-          laborum molestias provident distinctio commodi aperiam perferendis
-          animi! Eos cumque laboriosam iusto.
-        </p>
+        <!-- Contenu des onglets -->
+        <div class="tab-content">
+          <div class="tab-pane active" id="details">
+            <h3>Détails du client</h3>
+            <p>Contenu des détails du client...</p>
+          </div>
+          <div class="tab-pane" id="enrollments">
+            <h3>Enrollments</h3>
+            <p>Contenu des enrollments...</p>
+          </div>
+          <div class="tab-pane" id="activity-feed">
+            <h3>Activity feed</h3>
+            <p>Contenu de l'activity feed...</p>
+          </div>
+          <div class="tab-pane" id="quiz-survey">
+            <h3>Quiz & Survey</h3>
+            <p>Contenu des quiz et surveys...</p>
+          </div>
+        </div>
       </main>
     </div>
 

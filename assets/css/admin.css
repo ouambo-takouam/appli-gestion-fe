@@ -161,16 +161,49 @@ button {
   top: 55px;
   left: 0;
   width: 100%;
-  box-shadow: 0 -10px 0 0 #f6f8fb, 10px 0 0 0 #f6f8fb, -10px 0 0 0 #f6f8fb,
-    0 2px 10px -4px rgba(0, 0, 0, 0.5);
+  background-color: var(--clr-white);
+  border-bottom: 1px solid rgba(40, 45, 55, 0.26);
 }
 
 @media (min-width: 992px) {
   .nav-tabs-wrapper {
     position: static;
-    /* margin: 12px 0 32px; */
-    border: 1px solid red;
+    background-color: var(--clr-background);
+    margin: 20px 0 32px;
   }
+}
+
+.nav-tabs {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.nav-tabs .nav-item {
+  line-height: 1.625rem;
+}
+
+.nav-tabs .nav-link {
+  border-bottom: 3px solid transparent;
+  color: inherit;
+  font-size: 1.125rem;
+  font-weight: var(--fw-medium);
+  text-decoration: none;
+  white-space: nowrap;
+  display: flex;
+  padding: 12px 24px;
+}
+
+.nav-tabs .nav-link.active {
+  border-color: #1336b2;
+  color: #1336b2;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
 }
 
 /* Inputs */
@@ -387,6 +420,8 @@ button {
   margin-left: -4px;
   margin-bottom: 0.8em;
   display: none;
+  position: sticky;
+  background-color: var(--clr-background);
 }
 
 @media (min-width: 992px) {
@@ -428,8 +463,8 @@ button {
 
 @media (min-width: 992px) {
   .topbar {
-    position: static;
-    background-color: unset;
+    position: sticky;
+    background-color: var(--clr-background);
   }
 }
 

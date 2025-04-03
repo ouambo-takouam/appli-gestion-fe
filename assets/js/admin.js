@@ -79,3 +79,26 @@ function handleResize() {
 }
 
 window.addEventListener("resize", handleResize);
+
+// Tabs navigation pour page de details
+// Récupère tous les liens d'onglets
+const tabLinks = document.querySelectorAll(".nav-link");
+const tabPanes = document.querySelectorAll(".tab-pane");
+
+// Ajoute un écouteur d'événement à chaque lien
+tabLinks.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Retire la classe active de tous les liens et panneaux
+    tabLinks.forEach((el) => el.classList.remove("active"));
+    tabPanes.forEach((el) => el.classList.remove("active"));
+
+    // Ajoute la classe active au lien cliqué
+    this.classList.add("active");
+
+    // Affiche le panneau correspondant
+    const targetId = this.getAttribute("data-target");
+    document.getElementById(targetId).classList.add("active");
+  });
+});

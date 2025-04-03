@@ -22,16 +22,175 @@ body {
   line-height: 1.375rem;
 }
 
+/*------------------*/
+/* 1. Components    */
+/*------------------*/
+
+/* Buttons */
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-group {
+  display: flex;
+  position: relative;
+}
+
+.btn-group:hover .btn.right::before {
+  width: 0;
+}
+
+.btn {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  color: inherit;
+  font-size: 0.875rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.03125rem;
+  line-height: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .btn {
+    padding: 10px;
+  }
+}
+
+.btn.primary {
+  background-color: #1336b2;
+  color: var(--clr-white);
+}
+
+.btn.primary:hover {
+  background-color: #2a4ecc;
+}
+
+.btn.left {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn svg {
+  font-size: 0.4rem;
+  line-height: 24px;
+}
+
+.btn.right {
+  border-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-inline: 6px;
+}
+
+.btn.right::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 0;
+  width: 1px;
+  background: #666e7d;
+}
+
+.btn.right svg {
+  margin: 0;
+}
+
+/* Dropdowns */
+.dropdown-menu {
+  position: absolute;
+  z-index: 999;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  border-radius: 8px;
+  background-color: var(--clr-white);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.25);
+}
+
+.dropdown-list {
+  padding: 12px;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-list-item {
+  white-space: nowrap;
+}
+
+.dropdown-list-item button {
+  padding: 8px 6px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  color: #282d37;
+  font-weight: var(--fw-semibold);
+  font-size: 0.9rem;
+}
+
+.dropdown-list-item button:hover {
+  border-color: #666e7d;
+  background-color: #f6f8fb;
+}
+
+.dropdown-list-item button.danger {
+  color: #cc2414;
+}
+
+.dropdown-list-item button.danger:hover {
+  background-color: #fff4f2;
+}
+
+/* Nav Tabs */
+.nav-tabs-wrapper {
+  position: fixed;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -10px 0 0 #f6f8fb, 10px 0 0 0 #f6f8fb, -10px 0 0 0 #f6f8fb,
+    0 2px 10px -4px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 992px) {
+  .nav-tabs-wrapper {
+    position: static;
+    /* margin: 12px 0 32px; */
+    border: 1px solid red;
+  }
+}
+
+/* Inputs */
+
+/*-------------------*/
+/* 2. Entire page    */
+/*-------------------*/
+
 .admin-container {
   display: flex;
   min-height: 100vh;
+  overflow-y: hidden;
 }
 
 /*---------------*/
-/* 1. Sidebar    */
+/* 3. Sidebar    */
 /*---------------*/
 .sidebar {
-  position: fixed;
+  height: 100vh;
+  position: sticky;
   left: 0;
   top: 0;
   bottom: 0;
@@ -207,10 +366,12 @@ body {
 }
 
 /*---------------*/
-/* 2. Content    */
+/* 4. Content    */
 /*---------------*/
 .main-content {
   flex: 1;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 @media (min-width: 992px) {
@@ -220,10 +381,42 @@ body {
 }
 
 /*  Entete de la page  */
+.breadcrumb {
+  height: 24px;
+  font-size: 0.85rem;
+  margin-left: -4px;
+  margin-bottom: 0.8em;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .breadcrumb {
+    display: block;
+  }
+}
+
+.breadcrumb a {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  color: #666e7d;
+  font-weight: var(--fw-semibold);
+  font-family: "poppins", sans-serif;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: margin 0.15s ease-in-out;
+}
+
+.breadcrumb a:hover {
+  color: #383f4d;
+  margin-left: 2px;
+}
+
 .topbar {
   position: fixed;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   z-index: 997;
   top: 0;
   left: 0;
@@ -240,7 +433,13 @@ body {
   }
 }
 
-.mobile-toggle {
+.topbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-toggle,
+.back-link {
   border: none;
   background-color: transparent;
   color: inherit;
@@ -258,6 +457,9 @@ body {
   .mobile-toggle {
     display: none;
   }
+  .back-link {
+    display: none;
+  }
 }
 
 .topbar-title {
@@ -272,24 +474,24 @@ body {
 
 @media (min-width: 992px) {
   .topbar-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 3.25rem;
     font-weight: var(--fw-medium);
   }
 }
 
 .topbar-actions {
-  display: flex;
   position: relative;
-  flex-grow: 1;
-  align-items: center;
-  align-self: flex-start;
-  justify-content: flex-end;
-  height: 100%;
-  margin-right: 8px;
+  margin-right: 1em;
 }
 
-.notifications {
+@media (min-width: 992px) {
+  .topbar-actions.details {
+    display: none;
+  }
+}
+
+/* .notifications {
   position: relative;
   cursor: pointer;
   color: var(--text-color);
@@ -314,10 +516,10 @@ body {
 .page-content {
   padding: 25px;
   flex: 1;
-}
+} */
 
 /* Cards */
-.cards-container {
+/* .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -376,10 +578,10 @@ body {
 .card-info p {
   font-size: 1.3rem;
   font-weight: 600;
-}
+} */
 
 /* Table */
-.content-section {
+/* .content-section {
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -467,11 +669,11 @@ tr:hover {
 
 .action-btn:hover {
   color: var(--primary-color);
-}
+} */
 
 /* Responsive Styles */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .cards-container {
     grid-template-columns: 1fr 1fr;
   }
@@ -494,10 +696,10 @@ tr:hover {
   td {
     padding: 8px 10px;
   }
-}
+} */
 
 /* Styles pour les pages de listing */
-.data-table {
+/* .data-table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
@@ -649,10 +851,10 @@ tr:hover {
 
 .dropdown-item:hover {
   background-color: #f8f9fa;
-}
+} */
 
 /* Styles pour la page de détail */
-.detail-header {
+/* .detail-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -748,10 +950,10 @@ tr:hover {
   padding: 10px 15px;
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Styles pour le formulaire */
-.form-grid {
+/* .form-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -873,4 +1075,4 @@ tr:hover {
 
 .text-right {
   text-align: right;
-}
+} */

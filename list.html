@@ -193,21 +193,7 @@
 
       <!-- Contenu principal -->
       <main class="main-content">
-        <!-- Entete de page de detail -->
-        <h6 class="breadcrumb">
-          <a href="#">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="currentColor"
-            >
-              <path d="M560-280 360-480l200-200v400Z" />
-            </svg>
-            Customers
-          </a>
-        </h6>
+        <!-- Entete de la page de listing -->
         <header class="topbar">
           <div class="topbar-left">
             <button class="mobile-toggle">
@@ -226,80 +212,168 @@
                 ></path>
               </svg>
             </button>
-            <h1 class="topbar-title">KHALID MOUNTASSIR</h1>
+            <h1 class="topbar-title">Liste des clients</h1>
           </div>
-          <div class="topbar-actions details">
-            <button class="btn primary">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24px"
-                viewBox="0 -960 960 960"
-                width="24px"
-                fill="currentColor"
-              >
-                <path
-                  d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"
-                />
-              </svg>
-            </button>
+          <div class="topbar-actions">
+            <div class="btn-group">
+              <a href="#" class="btn left primary">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  height="24"
+                  preserveAspectRatio="none"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  fill="currentColor"
+                >
+                  <path
+                    transform="scale(1 1)"
+                    d="M13 11h5a1 1 0 0 1 0 2h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5V6a1 1 0 0 1 2 0v5z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+                Ajouter client
+              </a>
+              <button class="btn right primary">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  height="24"
+                  preserveAspectRatio="none"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  fill="currentColor"
+                >
+                  <path
+                    transform="scale(1 1)"
+                    d="M12.18 15c.453 0 .847.167 1.18.5.333.333.5.727.5 1.18 0 .453-.167.847-.5 1.18-.333.333-.727.5-1.18.5-.453 0-.847-.167-1.18-.5a1.614 1.614 0 0 1-.5-1.18c0-.453.167-.847.5-1.18.333-.333.727-.5 1.18-.5zm0-5c.453 0 .847.167 1.18.5.333.333.5.727.5 1.18 0 .453-.167.847-.5 1.18-.333.333-.727.5-1.18.5-.453 0-.847-.167-1.18-.5a1.614 1.614 0 0 1-.5-1.18c0-.453.167-.847.5-1.18.333-.333.727-.5 1.18-.5zm0-1.64c-.453 0-.847-.167-1.18-.5a1.614 1.614 0 0 1-.5-1.18c0-.453.167-.847.5-1.18.333-.333.727-.5 1.18-.5.453 0 .847.167 1.18.5.333.333.5.727.5 1.18 0 .453-.167.847-.5 1.18-.333.333-.727.5-1.18.5z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+              <!-- <div class="dropdown-menu">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <button>Edit</button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button>Copy express sign in link</button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="danger">Delete</button>
+                  </li>
+                </ul>
+              </div> -->
+            </div>
           </div>
         </header>
 
+        <!-- Contenu de la page -->
         <div class="page-content">
-          <!-- Navigation entre rubrique de l'objet visualise (client, fournisseur, ...) -->
-          <div class="nav-tabs-wrapper">
-            <ul class="nav-tabs">
-              <li class="nav-item">
-                <a class="nav-link active" data-target="details" href="#"
-                  >Details</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-target="enrollments" href="#"
-                  >Enrollments</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-target="activity-feed" href="#"
-                  >Activity feed</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-target="quiz-survey" href="#"
-                  >Quiz & Survey</a
-                >
-              </li>
-            </ul>
+          <div class="cards-container">
+            <div class="card">
+              <div class="card-icon bg-blue">
+                <i class="fas fa-boxes"></i>
+              </div>
+              <div class="card-info">
+                <h3>Produits en stock</h3>
+                <p>1,248</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-icon bg-green">
+                <i class="fas fa-file-invoice-dollar"></i>
+              </div>
+              <div class="card-info">
+                <h3>Ventes ce mois</h3>
+                <p>248</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-icon bg-orange">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="card-info">
+                <h3>Nouveaux clients</h3>
+                <p>32</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-icon bg-purple">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="card-info">
+                <h3>Chiffre d'affaires</h3>
+                <p>5,248,000 FCFA</p>
+              </div>
+            </div>
           </div>
-          <!-- Contenu des onglets -->
-          <div class="tab-content">
-            <div class="tab-pane active" id="details">
-              <h3>Détails du client</h3>
-              <p>Contenu des détails du client...</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo
-                ipsum dolorem, libero id illo reiciendis modi, sint non,
-                voluptate officiis pariatur fuga. Sequi sint illo ab voluptatem?
-                Odio, dolorem excepturi.
-              </p>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat
-                velit porro architecto omnis quis sequi optio eaque, facere
-                magni officiis aliquam, earum vero recusandae error. Tenetur rem
-                maiores maxime error!
-              </p>
+
+          <div class="content-section">
+            <div class="section-header">
+              <h2>Dernières transactions</h2>
+              <a href="#" class="view-all">Voir tout</a>
             </div>
-            <div class="tab-pane" id="enrollments">
-              <h3>Enrollments</h3>
-              <p>Contenu des enrollments...</p>
-            </div>
-            <div class="tab-pane" id="activity-feed">
-              <h3>Activity feed</h3>
-              <p>Contenu de l'activity feed...</p>
-            </div>
-            <div class="tab-pane" id="quiz-survey">
-              <h3>Quiz & Survey</h3>
-              <p>Contenu des quiz et surveys...</p>
+            <div class="table-responsive">
+              <table>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Client</th>
+                    <th>Date</th>
+                    <th>Montant</th>
+                    <th>Statut</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>#1254</td>
+                    <td>SARL Tech Solutions</td>
+                    <td>15/06/2023</td>
+                    <td>125,000 FCFA</td>
+                    <td><span class="status paid">Payé</span></td>
+                    <td>
+                      <button class="action-btn view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn print">
+                        <i class="fas fa-print"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#1253</td>
+                    <td>Entreprise ABC</td>
+                    <td>14/06/2023</td>
+                    <td>85,500 FCFA</td>
+                    <td><span class="status pending">En attente</span></td>
+                    <td>
+                      <button class="action-btn view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn print">
+                        <i class="fas fa-print"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>#1252</td>
+                    <td>Shop XYZ</td>
+                    <td>13/06/2023</td>
+                    <td>210,000 FCFA</td>
+                    <td><span class="status paid">Payé</span></td>
+                    <td>
+                      <button class="action-btn view">
+                        <i class="fas fa-eye"></i>
+                      </button>
+                      <button class="action-btn print">
+                        <i class="fas fa-print"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>

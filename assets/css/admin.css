@@ -867,7 +867,6 @@ tr:hover {
 }
 
 .dropdown-menu {
-  display: none;
   position: absolute;
   background-color: white;
   min-width: 160px;
@@ -875,6 +874,7 @@ tr:hover {
   z-index: 1;
   border-radius: 4px;
   padding: 5px 0;
+  display: none;
 }
 
 .dropdown:hover .dropdown-menu {

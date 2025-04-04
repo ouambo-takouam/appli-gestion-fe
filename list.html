@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/admin.css" />
+    <link rel="stylesheet" href="assets/css/sidebar.css" />
   </head>
   <body>
     <div class="admin-container">
@@ -270,51 +271,96 @@
 
         <!-- Contenu de la page -->
         <div class="page-content">
-          <div class="cards-container">
-            <div class="card">
-              <div class="card-icon bg-blue">
-                <i class="fas fa-boxes"></i>
+          <div class="table-wrapper">
+            <div class="table-header">
+              <div class="table-header-toolbar"></div>
+              <div class="table-header-settings">
+                <div class="table-btn-wrapper">
+                  <button class="table-btn">
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      height="24"
+                      preserveAspectRatio="none"
+                      viewBox="0 0 24 24"
+                      width="24"
+                    >
+                      <path
+                        transform="scale(1 1)"
+                        d="M10 18V6h4.127v12H10zm-6 0V6h4.127v12H4zm12.873-1H19V7h-2.127v10zm-1-11H20v12h-4.127V6z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="table-btn-wrapper">
+                  <button class="table-btn">
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      height="24"
+                      preserveAspectRatio="none"
+                      viewBox="0 0 24 24"
+                      width="24"
+                    >
+                      <path
+                        transform="scale(1 1)"
+                        d="M14.895 7.57L12.61 5.285v11.07a.6.6 0 0 1-.186.44.6.6 0 0 1-.44.185.617.617 0 0 1-.625-.625V5.325L9.095 7.57a.567.567 0 0 1-.44.196.567.567 0 0 1-.439-.196.556.556 0 0 1-.195-.43c0-.169.065-.318.195-.448L12.005 3l3.788 3.692a.89.89 0 0 1 .127.214.605.605 0 0 1 .049.235.605.605 0 0 1-.049.234.597.597 0 0 1-.127.195.618.618 0 0 1-.449.196.618.618 0 0 1-.45-.196zM22 19.837c0 .327-.12.603-.361.827a1.256 1.256 0 0 1-.889.336H3.25c-.352 0-.648-.112-.889-.336-.24-.224-.361-.5-.361-.827v-7.674c0-.315.12-.588.361-.818.241-.23.537-.345.889-.345h5.645v1.181H4.012a.78.78 0 0 0-.537.2.632.632 0 0 0-.225.49v6.258c0 .193.075.36.225.5a.76.76 0 0 0 .537.208l15.976-.018a.76.76 0 0 0 .537-.209.66.66 0 0 0 .225-.5v-6.239a.632.632 0 0 0-.225-.49.78.78 0 0 0-.537-.2h-4.863V11h5.625c.352 0 .648.115.889.345.24.23.361.503.361.818v7.674z"
+                        fill-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
               </div>
-              <div class="card-info">
-                <h3>Produits en stock</h3>
-                <p>1,248</p>
+              <div class="table-header-pagination">
+                <span>
+                  <i>
+                    <span>26</span> - <span>50</span> of <span>2500</span>
+                  </i>
+                </span>
+                <nav>
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          height="24"
+                          width="24"
+                          preserveAspectRatio="none"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path
+                            transform="scale(1 1)"
+                            d="M6.895 11.15l12.234-.008c.223 0 .446.084.616.252.34.335.34.88 0 1.215a.874.874 0 0 1-.616.252H6.905l3.723 3.673a.87.87 0 0 1 0 1.216.872.872 0 0 1-.616.253.872.872 0 0 1-.616-.253l-5.1-5.043a.99.99 0 0 1 0-1.412l5.098-5.043A.874.874 0 0 1 10.01 6c.481 0 .871.385.871.86a.851.851 0 0 1-.255.608l-3.73 3.682z"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg
+                          aria-hidden="true"
+                          focusable="false"
+                          height="24"
+                          width="24"
+                          preserveAspectRatio="none"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path
+                            transform="scale(1 1)"
+                            d="M17.26 12.853l-12.44.008a.797.797 0 0 1-.58-.252.89.89 0 0 1 0-1.215.797.797 0 0 1 .58-.252h12.43l-3.631-3.46a.815.815 0 0 1-.245-.58c0-.224.093-.428.244-.578a.877.877 0 0 1 .608-.241c.238 0 .453.092.608.24l4.981 4.756a1 1 0 0 1 0 1.446l-4.979 4.755a.879.879 0 0 1-.608.24c-.474 0-.86-.367-.86-.82 0-.225.097-.43.253-.578l3.64-3.469z"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
-            <div class="card">
-              <div class="card-icon bg-green">
-                <i class="fas fa-file-invoice-dollar"></i>
-              </div>
-              <div class="card-info">
-                <h3>Ventes ce mois</h3>
-                <p>248</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-icon bg-orange">
-                <i class="fas fa-users"></i>
-              </div>
-              <div class="card-info">
-                <h3>Nouveaux clients</h3>
-                <p>32</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-icon bg-purple">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <div class="card-info">
-                <h3>Chiffre d'affaires</h3>
-                <p>5,248,000 FCFA</p>
-              </div>
-            </div>
-          </div>
 
-          <div class="content-section">
-            <div class="section-header">
-              <h2>Dernières transactions</h2>
-              <a href="#" class="view-all">Voir tout</a>
-            </div>
-            <div class="table-responsive">
+            <div class="table-content">
               <table>
                 <thead>
                   <tr>
@@ -323,7 +369,7 @@
                     <th>Date</th>
                     <th>Montant</th>
                     <th>Statut</th>
-                    <th>Actions</th>
+                    <th class="col-options"></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -333,13 +379,25 @@
                     <td>15/06/2023</td>
                     <td>125,000 FCFA</td>
                     <td><span class="status paid">Payé</span></td>
-                    <td>
-                      <button class="action-btn view">
-                        <i class="fas fa-eye"></i>
-                      </button>
-                      <button class="action-btn print">
-                        <i class="fas fa-print"></i>
-                      </button>
+                    <td class="td-options">
+                      <div class="table-btn-wrapper">
+                        <button class="table-btn">
+                          <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            height="24"
+                            width="24"
+                            preserveAspectRatio="none"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              transform="scale(1 1)"
+                              d="M12.18 15c.453 0 .847.167 1.18.5.333.333.5.727.5 1.18 0 .453-.167.847-.5 1.18-.333.333-.727.5-1.18.5-.453 0-.847-.167-1.18-.5a1.614 1.614 0 0 1-.5-1.18c0-.453.167-.847.5-1.18.333-.333.727-.5 1.18-.5zm0-5c.453 0 .847.167 1.18.5.333.333.5.727.5 1.18 0 .453-.167.847-.5 1.18-.333.333-.727.5-1.18.5-.453 0-.847-.167-1.18-.5a1.614 1.614 0 0 1-.5-1.18c0-.453.167-.847.5-1.18.333-.333.727-.5 1.18-.5zm0-1.64c-.453 0-.847-.167-1.18-.5a1.614 1.614 0 0 1-.5-1.18c0-.453.167-.847.5-1.18.333-.333.727-.5 1.18-.5.453 0 .847.167 1.18.5.333.333.5.727.5 1.18 0 .453-.167.847-.5 1.18-.333.333-.727.5-1.18.5z"
+                              fill-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
                     </td>
                   </tr>
                   <tr>
@@ -348,13 +406,25 @@
                     <td>14/06/2023</td>
                     <td>85,500 FCFA</td>
                     <td><span class="status pending">En attente</span></td>
-                    <td>
-                      <button class="action-btn view">
-                        <i class="fas fa-eye"></i>
-                      </button>
-                      <button class="action-btn print">
-                        <i class="fas fa-print"></i>
-                      </button>
+                    <td class="td-options">
+                      <div class="table-btn-wrapper">
+                        <button class="table-btn">
+                          <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            height="24"
+                            width="24"
+                            preserveAspectRatio="none"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              transform="scale(1 1)"
+                              d="M12.18 15c.453 0 .847.167 1.18.5.333.333.5.727.5 1.18 0 .453-.167.847-.5 1.18-.333.333-.727.5-1.18.5-.453 0-.847-.167-1.18-.5a1.614 1.614 0 0 1-.5-1.18c0-.453.167-.847.5-1.18.333-.333.727-.5 1.18-.5zm0-5c.453 0 .847.167 1.18.5.333.333.5.727.5 1.18 0 .453-.167.847-.5 1.18-.333.333-.727.5-1.18.5-.453 0-.847-.167-1.18-.5a1.614 1.614 0 0 1-.5-1.18c0-.453.167-.847.5-1.18.333-.333.727-.5 1.18-.5zm0-1.64c-.453 0-.847-.167-1.18-.5a1.614 1.614 0 0 1-.5-1.18c0-.453.167-.847.5-1.18.333-.333.727-.5 1.18-.5.453 0 .847.167 1.18.5.333.333.5.727.5 1.18 0 .453-.167.847-.5 1.18-.333.333-.727.5-1.18.5z"
+                              fill-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
                     </td>
                   </tr>
                   <tr>
@@ -363,18 +433,33 @@
                     <td>13/06/2023</td>
                     <td>210,000 FCFA</td>
                     <td><span class="status paid">Payé</span></td>
-                    <td>
-                      <button class="action-btn view">
-                        <i class="fas fa-eye"></i>
-                      </button>
-                      <button class="action-btn print">
-                        <i class="fas fa-print"></i>
-                      </button>
+                    <td class="td-options">
+                      <div class="table-btn-wrapper">
+                        <button class="table-btn">
+                          <svg
+                            aria-hidden="true"
+                            focusable="false"
+                            height="24"
+                            width="24"
+                            preserveAspectRatio="none"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              transform="scale(1 1)"
+                              d="M12.18 15c.453 0 .847.167 1.18.5.333.333.5.727.5 1.18 0 .453-.167.847-.5 1.18-.333.333-.727.5-1.18.5-.453 0-.847-.167-1.18-.5a1.614 1.614 0 0 1-.5-1.18c0-.453.167-.847.5-1.18.333-.333.727-.5 1.18-.5zm0-5c.453 0 .847.167 1.18.5.333.333.5.727.5 1.18 0 .453-.167.847-.5 1.18-.333.333-.727.5-1.18.5-.453 0-.847-.167-1.18-.5a1.614 1.614 0 0 1-.5-1.18c0-.453.167-.847.5-1.18.333-.333.727-.5 1.18-.5zm0-1.64c-.453 0-.847-.167-1.18-.5a1.614 1.614 0 0 1-.5-1.18c0-.453.167-.847.5-1.18.333-.333.727-.5 1.18-.5.453 0 .847.167 1.18.5.333.333.5.727.5 1.18 0 .453-.167.847-.5 1.18-.333.333-.727.5-1.18.5z"
+                              fill-rule="evenodd"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
+
+            <!-- TO ADD: table footer-->
+            <div class="table-footer"></div>
           </div>
         </div>
       </main>

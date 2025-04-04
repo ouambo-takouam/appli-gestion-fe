@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/admin.css" />
     <link rel="stylesheet" href="assets/css/sidebar.css" />
+    <link rel="stylesheet" href="assets/css/forms.css" />
   </head>
   <body>
     <div class="admin-container">
@@ -194,84 +195,8 @@
 
       <!-- Contenu principal -->
       <main class="main-content">
-        <!-- Entete de la page de listing -->
-        <header class="topbar">
-          <div class="topbar-left">
-            <button class="mobile-toggle">
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                width="24"
-                height="24"
-                preserveAspectRatio="none"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  transform="scale(1 1)"
-                  d="M4.5 7h15v1.68h-15V7zm0 5.82v-1.64h15v1.64h-15zm0 4.18v-1.68h15V17h-15z"
-                ></path>
-              </svg>
-            </button>
-            <h1 class="topbar-title">Liste des clients</h1>
-          </div>
-          <div class="topbar-actions">
-            <div class="btn-group">
-              <a href="#" class="btn left primary">
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  height="24"
-                  preserveAspectRatio="none"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  fill="currentColor"
-                >
-                  <path
-                    transform="scale(1 1)"
-                    d="M13 11h5a1 1 0 0 1 0 2h-5v5a1 1 0 0 1-2 0v-5H6a1 1 0 0 1 0-2h5V6a1 1 0 0 1 2 0v5z"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
-                Ajouter client
-              </a>
-              <button class="btn right primary">
-                <svg
-                  aria-hidden="true"
-                  focusable="false"
-                  height="24"
-                  preserveAspectRatio="none"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  fill="currentColor"
-                >
-                  <path
-                    transform="scale(1 1)"
-                    d="M12.18 15c.453 0 .847.167 1.18.5.333.333.5.727.5 1.18 0 .453-.167.847-.5 1.18-.333.333-.727.5-1.18.5-.453 0-.847-.167-1.18-.5a1.614 1.614 0 0 1-.5-1.18c0-.453.167-.847.5-1.18.333-.333.727-.5 1.18-.5zm0-5c.453 0 .847.167 1.18.5.333.333.5.727.5 1.18 0 .453-.167.847-.5 1.18-.333.333-.727.5-1.18.5-.453 0-.847-.167-1.18-.5a1.614 1.614 0 0 1-.5-1.18c0-.453.167-.847.5-1.18.333-.333.727-.5 1.18-.5zm0-1.64c-.453 0-.847-.167-1.18-.5a1.614 1.614 0 0 1-.5-1.18c0-.453.167-.847.5-1.18.333-.333.727-.5 1.18-.5.453 0 .847.167 1.18.5.333.333.5.727.5 1.18 0 .453-.167.847-.5 1.18-.333.333-.727.5-1.18.5z"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
-              </button>
-              <div class="dropdown-menu">
-                <ul class="dropdown-list">
-                  <li class="dropdown-list-item">
-                    <button>Edit</button>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <button>Copy express sign in link</button>
-                  </li>
-                  <li class="dropdown-list-item">
-                    <button class="danger">Delete</button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </header>
-
-        <!-- Entete de page de creation -->
-        <!-- Breadcrumb-->
-        <!-- <h6 class="breadcrumb">
+        <!-- Entete de page de detail -->
+        <h6 class="breadcrumb">
           <a href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -284,10 +209,10 @@
             </svg>
             Customers
           </a>
-        </h6> -->
+        </h6>
 
         <!-- Topbar -->
-        <!-- <header class="topbar">
+        <header class="topbar">
           <div class="topbar-left">
             <a href="#" class="back-link">
               <svg
@@ -307,59 +232,121 @@
           <div class="topbar-actions">
             <button class="btn primary">Save</button>
           </div>
-        </header> -->
+        </header>
 
-        <!-- Entete de la page de details-->
-        <!-- <h6 class="breadcrumb">
-          <a href="#">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="currentColor"
-            >
-              <path d="M560-280 360-480l200-200v400Z" />
-            </svg>
-            Customers
-          </a>
-        </h6>
-        <header class="topbar">
-          <div class="topbar-left">
-            <button class="mobile-toggle">
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                width="24"
-                height="24"
-                preserveAspectRatio="none"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  transform="scale(1 1)"
-                  d="M4.5 7h15v1.68h-15V7zm0 5.82v-1.64h15v1.64h-15zm0 4.18v-1.68h15V17h-15z"
-                ></path>
-              </svg>
-            </button>
-            <h1 class="topbar-title">KHALID MOUNTASSIR</h1>
-          </div>
-          <div class="topbar-actions details">
-            <button class="btn primary">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24px"
-                viewBox="0 -960 960 960"
-                width="24px"
-                fill="currentColor"
-              >
-                <path
-                  d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"
-                />
-              </svg>
-            </button>
-          </div>
-        </header> -->
+        <div class="page-content">
+          <form action="#" method="post">
+            <div class="form-wrapper">
+              <div class="form-box">
+                <div class="header">
+                  <h2>Ajouter un nouveau produit</h2>
+                  <p>* Informations requises</p>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="id_name">Nom du produit*</label>
+                    <input type="text" name="name" id="id_name" required />
+                    <div class="error-message">
+                      <ul class="errorlist">
+                        <li>This field is required.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="id_code">Code SKU/Reference*</label>
+                    <input type="text" name="code" id="id_code" />
+                    <div class="error-message">
+                      <ul class="errorlist">
+                        <li>This field is required.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="id_family">Famille de produit</label>
+                    <select name="family" id="id_family">
+                      <option value="" selected="">---------</option>
+                      <option value="1">SANITAIRE</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="id_selling_price">Prix de vente</label>
+                    <div class="input-with-icon">
+                      <input
+                        type="text"
+                        name="selling_price"
+                        id="id_selling_price"
+                      />
+                      <span class="currency-symbol">CFA</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="id_family">Produit</label>
+                    <select name="family" id="id_family">
+                      <option value="" selected="">---------</option>
+                      <option value="1">SANITAIRE</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="id_selling_price">Quantité</label>
+                    <input
+                      type="text"
+                      name="selling_price"
+                      id="id_selling_price"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="id_selling_price">Prix</label>
+                    <div class="input-with-icon">
+                      <input
+                        type="text"
+                        name="selling_price"
+                        id="id_selling_price"
+                      />
+                      <span class="currency-symbol">CFA</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-box">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="id_min">Quantité minimale</label>
+                    <input type="text" name="code" id="id_min" />
+                  </div>
+                  <div class="form-group">
+                    <label for="id_max">Quantité maximale</label>
+                    <input type="text" name="code" id="id_min" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="id_description">Description</label>
+                    <textarea
+                      name="description"
+                      cols="40"
+                      rows="10"
+                      id="id_description"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="checkbox-label">
+                      <input type="checkbox" name="is_active" checked="" />
+                      <span class="checkmark"></span>
+                      Produit actif
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <button class="btn primary">Add something</button>
+        </div>
       </main>
     </div>
 
